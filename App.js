@@ -7,7 +7,7 @@
  * @flow
  * @lint-ignore-every XPLATJSCOPYRIGHT1
  */
-import Geolocation from '@react-native-community/geolocation';
+import Geolocation from 'react-native-geolocation-service';
 import React from "react";
 import {
   StyleSheet,
@@ -80,7 +80,7 @@ class AnimatedMarkers extends React.Component {
 
         if (Platform.OS === "android") {
           if (this.marker) {
-            this.marker._component.animateMarkerToCoordinate(
+            this.marker.animateMarkerToCoordinate(
               newCoordinate,
               500
             );
